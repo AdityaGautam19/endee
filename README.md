@@ -60,6 +60,7 @@ A dataset of 100+ common programming errors and their solutions is stored.
 Example entry:
 
 ZeroDivisionError: division by zero | Solution: Check the denominator before dividing.
+
 2️⃣ Convert Errors Into Vectors
 
 Each error is transformed into an embedding using Sentence Transformers.
@@ -77,71 +78,74 @@ The system compares the query embedding with all stored embeddings.
 The closest match is returned instantly.
 
 🖥 Example Interaction
-Input
-cannot find module pandas
-Output
-Error:
+Input:
+cannot find module pandas  
+Output:  
+Error:  
 ModuleNotFoundError: no module named pandas
 
-Solution:
+Solution:  
 Install pandas using pip install pandas
+
 📸 Project Screenshot
 
-![App Screenshot](images/Screenshot 2026-03-13 132954.png)
-
+![App Screenshot](images/Screenshot 2026-03-13 132737.png)
 
 Record a 10-second screen recording showing:
 
-1️⃣ Entering an error
-2️⃣ Clicking search
+1️⃣ Entering an error  
+2️⃣ Clicking search  
 3️⃣ Solution appearing
 
 🏗 Tech Stack
-Backend
 
-Python
+**Backend**
+- Python
+- Flask
+- AI / Semantic Search
+- Sentence Transformers
+- NumPy
 
-Flask
-
-AI / Semantic Search
-
-Sentence Transformers
-
-NumPy
-
-Frontend
-
-HTML
-
-CSS
+**Frontend**
+- HTML
+- CSS
 
 📂 Project Structure
 ai-error-helper
 │
 ├── dataset
-│   └── errors.txt
+│ └── errors.txt
 │
 ├── templates
-│   └── index.html
+│ └── index.html
 │
 ├── images
-│   └── Screenshot 2026-03-13 132954.png
+│ └── Screenshot 2026-03-13 132737.png
 │
 ├── ingest.py
 ├── app.py
 ├── requirements.txt
 └── vectors.npy
+
 🚀 Running the Project
+
 1️⃣ Install Dependencies
+Run the following command in your terminal:
+
 pip install -r requirements.txt
+
 2️⃣ Generate Embeddings
+Generate vector embeddings for all errors:
+
 python ingest.py
 
-This converts all error entries into vector embeddings.
-
 3️⃣ Start the Server
+Start the Flask server:
+
 python app.py
+
 4️⃣ Open the Application
+Open your browser and go to:
 http://127.0.0.1:5000
 
 Paste a programming error and the AI will suggest a solution.
@@ -167,5 +171,4 @@ LLM explanation for beginners
 Chat-style debugging interface
 
 👨‍💻 Author
-
 Aditya Gautam
