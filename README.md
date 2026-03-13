@@ -89,7 +89,7 @@ Install pandas using pip install pandas
 
 📸 Project Screenshot
 
-![App Screenshot](images/Screenshot 2026-03-13 132737.png)
+![App Screenshot](images/Screenshot%202026-03-13%20132737.png)
 
 Record a 10-second screen recording showing:
 
